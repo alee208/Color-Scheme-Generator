@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 550px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+form > input {
+    width: 51px;
+    height: 34px;
+    border: none;
+    flex-shrink: 0;  /* Don't shrink the color picker */
+}
+
+form > select {
+    flex: 1;  /* Grows to fill space */
+    min-width: 150px;
+    height: 42px;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+form > button {
+    width: 123px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+    background-color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;  /* Don't shrink the button */
+}
+
+form > button:hover {
+    background-color: #f3f4f6;
+}
+
+#body-container {
+    width: 100%;
+    min-height: 460px;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.color-container {
+    flex: 1;  /* Equal width for all */
+    display: flex;
+    flex-direction: column;
+}
+
+.color {
+    width: 100%;
+    flex: 1;  /* Fills available space */
+    min-height: 300px;
+}
+
+.color-name {
+    text-align: center;
+    width: 100%;
+    height: 46px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.color-name:hover {
+    background-color: #f3f4f6;
+}
+
+.color-name p {
+    margin: 0;
+    font-size: 11px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    form > input,
+    form > select,
+    form > button {
+        width: 100%;
+    }
+    
+    form > select {
+        text-align: center;
+    }
+    
+    form > button {
+        font-size: 15px;
+    }
+    
+    #body-container {
+        flex-direction: column;
+    }
+    
+    .color {
+        min-height: 100px;
+    }
+}
